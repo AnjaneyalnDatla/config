@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - predicates:
+        - Path=/hello
+        uri: http://localhost:9090/greeting/english
+      - predicates:
+        - Path=/hola
+        uri: http://localhost:9090/greeting/spanish
+      - predicates:
+        - Path=/bonjour
+        uri: http://localhost:9090/greeting/french
