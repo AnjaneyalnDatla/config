@@ -2,12 +2,7 @@ spring:
   cloud:
     gateway:
       routes:
-      - predicates:
-        - Path=/hello
-        uri: "https://hello.apps.nonprod.us-east-1.aws.pcf.mapfreusa.com/greeting/english"
-      - predicates:
-        - Path=/hola
-        uri: "https://hello.apps.nonprod.us-east-1.aws.pcf.mapfreusa.com/greeting/spanish"
-      - predicates:
-        - Path=/bonjour
-        uri: "https://hello.apps.nonprod.us-east-1.aws.pcf.mapfreusa.com/greeting/french"
+      - id: baeldung_route
+        uri: http://baeldung.com
+        predicates:
+        - Path=/baeldung/
